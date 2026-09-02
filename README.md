@@ -63,6 +63,16 @@ RuleTrace reads text files only. It does not execute commands, follow symlinks, 
 - v0.1 traces repository-level locations; full nested directory precedence and frontmatter scopes are planned.
 - RuleTrace does not claim to emulate proprietary agent runtimes exactly. The mapping is documented and testable.
 
+## Output contract
+
+Human-readable output is the default. `--json` emits the discovered files, target agents, and conflict findings for CI or custom reporting. Exit code `1` is reserved for conflicts when `--fail-on-conflict` is enabled; invalid input exits with `2`.
+
+## Related tools
+
+- **[ctxbudget](https://github.com/HumSaw/ctxbudget)** measures the token cost of agent instructions, skills, and MCP schemas.
+- **RuleTrace** answers which instructions apply and whether they disagree.
+- **[dev-checkup](https://github.com/HumSaw/dev-checkup)** checks repository hygiene beyond agent configuration.
+
 ## Contributing
 
 Small fixtures are the best contribution. If an agent supports another instruction location, open an issue with a public documentation link and a minimal repository layout. See [CONTRIBUTING.md](CONTRIBUTING.md).
