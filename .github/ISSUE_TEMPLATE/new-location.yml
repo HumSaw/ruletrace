@@ -1,0 +1,30 @@
+name: New instruction location
+description: Document another agent instruction file or precedence rule
+title: "support: "
+labels: [enhancement, evidence-needed]
+body:
+  - type: input
+    id: agent
+    attributes:
+      label: Agent
+    validations:
+      required: true
+  - type: input
+    id: docs
+    attributes:
+      label: Public documentation URL
+    validations:
+      required: true
+  - type: textarea
+    id: layout
+    attributes:
+      label: Minimal repository layout
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior and precedence
+    validations:
+      required: true
